@@ -21,7 +21,7 @@ struct ContentView: View {
         //el renderingMode nos permite modificar nuestra imagen, el color de fondo por ejemplo
             .foregroundColor(.black)
             .padding(80)
-            //El soacer hace que se sitúe arriba de todo de su espacio
+            //El spacer hace que se sitúe arriba de todo de su espacio
             Spacer()
             
             
@@ -83,7 +83,8 @@ struct ContentView: View {
                     .shadow(radius: 10)
                     
                     
-                    Text("-> \(counter)")
+                    Text("( \(counter) )")
+                        .foregroundColor(counter <= 10 ? .black : .red)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 }
                 
