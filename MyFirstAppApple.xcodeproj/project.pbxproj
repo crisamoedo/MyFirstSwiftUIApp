@@ -11,6 +11,7 @@
 		86115ADA2ACC4CF8006B661B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86115AD92ACC4CF8006B661B /* ContentView.swift */; };
 		86115ADC2ACC4CFA006B661B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86115ADB2ACC4CFA006B661B /* Assets.xcassets */; };
 		86115ADF2ACC4CFA006B661B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86115ADE2ACC4CFA006B661B /* Preview Assets.xcassets */; };
+		86BDF2602ACD7CE8002FBFBD /* UsernamePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BDF25F2ACD7CE8002FBFBD /* UsernamePassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		86115AD92ACC4CF8006B661B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		86115ADB2ACC4CFA006B661B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86115ADE2ACC4CFA006B661B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		86BDF25F2ACD7CE8002FBFBD /* UsernamePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernamePassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				86115AD92ACC4CF8006B661B /* ContentView.swift */,
 				86115ADB2ACC4CFA006B661B /* Assets.xcassets */,
 				86115ADD2ACC4CFA006B661B /* Preview Content */,
+				86BDF25F2ACD7CE8002FBFBD /* UsernamePassword.swift */,
 			);
 			path = MyFirstAppApple;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86BDF2602ACD7CE8002FBFBD /* UsernamePassword.swift in Sources */,
 				86115ADA2ACC4CF8006B661B /* ContentView.swift in Sources */,
 				86115AD82ACC4CF8006B661B /* MyFirstAppAppleApp.swift in Sources */,
 			);

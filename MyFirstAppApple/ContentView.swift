@@ -15,10 +15,14 @@ struct ContentView: View {
     var body: some View {
         Image("icons-github")
             .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
-        //el renderingMode nos permite modificar nuestra imagen, el color de fondo por ejemeplo
+            .resizable()
+            .scaledToFit()
+            .frame(width: 100, height: 100)
+        //el renderingMode nos permite modificar nuestra imagen, el color de fondo por ejemplo
             .foregroundColor(.black)
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            
+            .padding(80)
+            //El soacer hace que se sitúe arriba de todo de su espacio
+            Spacer()
             
             
         
@@ -84,11 +88,13 @@ struct ContentView: View {
                 }
                 
             }
-            Text(Date(), style: .date)
-                .padding(.all)
             
-            //Si quisuéramos poner un contador sería igual pero cambiando el .date por .timer o la hora con .time
+            Spacer()
         }
+        Text(Date(), style: .date)
+            .padding(.all)
+        
+        //Si quisuéramos poner un contador sería igual pero cambiando el .date por .timer o la hora con .time
         
     }
     
