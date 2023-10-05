@@ -11,7 +11,9 @@ import SwiftUI
 struct MyFirstAppAppleApp: App {
     var body: some Scene {
         WindowGroup {
-            UsernamePassword()
+            ContentView()
+            //UsernamePassword()
+            //ListaCompra()
         }
     }
 }

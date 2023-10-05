@@ -12,13 +12,13 @@ struct UsernamePassword: View {
     @State var username = ""
     @State var passsword = ""
     @State var currentDate: Date = Date()
+    @State var isOn = false
     
     
     var body: some View {
         VStack {
-            Button("Reservas".uppercased()){}
-                
-                .padding(.all)
+            Button("Página de  reservas".uppercased()){}
+                .padding(.horizontal)
                 .background(.blue)
                 .font(.title)
                 .bold()
@@ -26,7 +26,7 @@ struct UsernamePassword: View {
                 .cornerRadius(10)
                 .shadow(radius: 10)
             
-            
+            //USANDO TEXTFIELD
             TextField("Username", text: $username)
             //la siguiente opción es para que nos aparezca el arroba cuando aparece el teclado
                 .keyboardType(.emailAddress)
@@ -41,6 +41,7 @@ struct UsernamePassword: View {
                     value in print("New Value \(value)")
             })
             
+            //USANDO SECUREFIELD PARA CONTRASEÑAS
             SecureField("Password", text: $passsword)
                 .keyboardType(.default)
                 .padding(8)
@@ -62,20 +63,39 @@ struct UsernamePassword: View {
                 .padding(.top, 10)
             Spacer()
         }
+        
+        
         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         
-    
         
-        
-        Form {
-            
-            //el Date con los 3 puntos hace que solo se pueda seleccionar una fecha futura
-            DatePicker("Fecha", selection: $currentDate, in: Date()..., displayedComponents: .date)
-            
-            Text(currentDate, style: .date)
-                .bold()
+        VStack {
+            Form {
                 
+                //USANDO DATEPICKER PARA HACER USO DEL CALENDARIO
+                //el Date con los 3 puntos hace que solo se pueda seleccionar una fecha futura
+                DatePicker("Fecha", selection: $currentDate, in: Date()..., displayedComponents: .date)
+                
+                Text(currentDate, style: .date)
+                    .bold()
+                    
+            }
+            
+            Form{
+                
+                //USANDO TOGGLE
+                Toggle("Tengo un descuento", isOn: $isOn)
+                //Text("\(isOn.description)")
+                //Aparecería debajo del toogle si está a true o false
+                   
+            }
+            
+           
         }
+        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        
+        
+        
+        
     
       
     }

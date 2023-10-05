@@ -12,7 +12,10 @@ struct ContentView: View {
     //El State nos permitirá mutar un valor
     @State var counter = 0
     
+    
     var body: some View {
+        
+        //USANDO IMAGE INSERTADA COMO PDF
         Image("icons-github")
             .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
             .resizable()
@@ -29,9 +32,10 @@ struct ContentView: View {
         VStack(alignment: .center) {
             
             VStack(alignment: .leading, spacing: 10.0) {
-                Text("GitHub")
+                
+                //USANDO LINK
+                Link("GitHub" , destination: URL (string : "https://github.com/crisamoedo")!)
                     .font(.largeTitle)
-                    .underline()
                     .bold()
                     .foregroundColor(.black)
                 
@@ -39,6 +43,8 @@ struct ContentView: View {
                     .foregroundStyle(.gray)
                 
                 HStack {
+                    
+                    //USANDO FORMAS
                     Rectangle()
                         .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                         .frame( width: 120, height : 80)
@@ -60,6 +66,7 @@ struct ContentView: View {
                 }
                 HStack(spacing: -7.0) {
                     
+                    //USANDO ICONOS
                     //estos iconos los tenemos en sfsymbols
                     Image(systemName: "hand.thumbsup")
                         .frame(width: 50, height: 50)
@@ -88,14 +95,18 @@ struct ContentView: View {
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 }
                 
+               
+                
             }
+
             
             Spacer()
         }
+        //USANDO DATE
         Text(Date(), style: .date)
             .padding(.all)
         
-        //Si quisuéramos poner un contador sería igual pero cambiando el .date por .timer o la hora con .time
+        //Si quisiéramos poner un contador sería igual pero cambiando el .date por .timer o la hora con .time
         
     }
     
